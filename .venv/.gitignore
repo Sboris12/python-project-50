@@ -1,0 +1,39 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+.venv/
+ENV/
+env/
+*.env
+
+# Pytest
+.cache/
+pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# Build / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+*.egg
+pip-log.txt
+
+# PyCharm
+.idea/
+
+# VS Code (на случай, если откроешь проект в нём)
+.vscode/
+
+# Logs
+*.log
+
+# OS-specific
+.DS_Store
+Thumbs.db
