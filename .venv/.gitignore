@@ -3,37 +3,49 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-# Virtual environment
-venv/
-.venv/
-ENV/
-env/
-*.env
+# C extensions
+*.so
 
-# Pytest
-.cache/
-pytest_cache/
-.coverage
-coverage.xml
-htmlcov/
-
-# Build / packaging
-build/
-dist/
+# Distribution / packaging
 *.egg-info/
-.eggs/
-*.egg
-pip-log.txt
+*.eggs/
+dist/
+build/
+pip-wheel-metadata/
+
+# Virtual environments
+.venv/
+env/
+venv/
 
 # PyCharm
 .idea/
 
-# VS Code (на случай, если откроешь проект в нём)
+# VSCode
 .vscode/
+
+# macOS
+.DS_Store
 
 # Logs
 *.log
 
-# OS-specific
-.DS_Store
-Thumbs.db
+# test cache
+.pytest_cache/
+
+# coverage reports
+htmlcov/
+.coverage
+.tox/
+.cache/
+nosetests.xml
+coverage.xml
+
+# mypy
+.mypy_cache/
+
+# Pydantic compiled models
+*.pyd
+
+# gendiff: ignore example output files
+gendiff_result*

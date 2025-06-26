@@ -1,3 +1,24 @@
+# Copyright (c) 2020-202x The virtualenv developers
+#
+# Permission is hereby granted, free of charge, to any person obtaining
+# a copy of this software and associated documentation files (the
+# "Software"), to deal in the Software without restriction, including
+# without limitation the rights to use, copy, modify, merge, publish,
+# distribute, sublicense, and/or sell copies of the Software, and to
+# permit persons to whom the Software is furnished to do so, subject to
+# the following conditions:
+#
+# The above copyright notice and this permission notice shall be
+# included in all copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+# EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+# NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+# LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+# OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+# WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
 # This file must be used using `source bin/activate.fish` *within a running fish ( http://fishshell.com ) session*.
 # Do not run it directly.
 
@@ -58,7 +79,7 @@ end
 # Unset irrelevant variables.
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV /Users/Boris/python-project-50/.venv
+set -gx VIRTUAL_ENV '/Users/Boris/python-project-50/.venv'
 
 # https://github.com/fish-shell/fish-shell/issues/436 altered PATH handling
 if test (echo $FISH_VERSION | head -c 1) -lt 3
@@ -66,12 +87,12 @@ if test (echo $FISH_VERSION | head -c 1) -lt 3
 else
     set -gx _OLD_VIRTUAL_PATH $PATH
 end
-set -gx PATH "$VIRTUAL_ENV"'/'bin $PATH
+set -gx PATH "$VIRTUAL_ENV"'/bin' $PATH
 
 # Prompt override provided?
 # If not, just use the environment name.
-if test -n ''
-    set -gx VIRTUAL_ENV_PROMPT ''
+if test -n 'python-project-50'
+    set -gx VIRTUAL_ENV_PROMPT 'python-project-50'
 else
     set -gx VIRTUAL_ENV_PROMPT (basename "$VIRTUAL_ENV")
 end

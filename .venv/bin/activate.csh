@@ -1,3 +1,24 @@
+# Copyright (c) 2020-202x The virtualenv developers
+#
+# Permission is hereby granted, free of charge, to any person obtaining
+# a copy of this software and associated documentation files (the
+# "Software"), to deal in the Software without restriction, including
+# without limitation the rights to use, copy, modify, merge, publish,
+# distribute, sublicense, and/or sell copies of the Software, and to
+# permit persons to whom the Software is furnished to do so, subject to
+# the following conditions:
+#
+# The above copyright notice and this permission notice shall be
+# included in all copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+# EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+# NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+# LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+# OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+# WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
 # This file must be used with "source bin/activate.csh" *from csh*.
 # You cannot run it directly.
 # Created by Davide Di Blasi <davidedb@gmail.com>.
@@ -10,15 +31,15 @@ alias deactivate 'test $?_OLD_VIRTUAL_PATH != 0 && setenv PATH "$_OLD_VIRTUAL_PA
 # Unset irrelevant variables.
 deactivate nondestructive
 
-setenv VIRTUAL_ENV /Users/Boris/python-project-50/.venv
+setenv VIRTUAL_ENV '/Users/Boris/python-project-50/.venv'
 
 set _OLD_VIRTUAL_PATH="$PATH:q"
-setenv PATH "$VIRTUAL_ENV:q/"bin":$PATH:q"
+setenv PATH "$VIRTUAL_ENV:q/bin:$PATH:q"
 
 
 
-if ('' != "") then
-    setenv VIRTUAL_ENV_PROMPT ''
+if ('python-project-50' != "") then
+    setenv VIRTUAL_ENV_PROMPT 'python-project-50'
 else
     setenv VIRTUAL_ENV_PROMPT "$VIRTUAL_ENV:t:q"
 endif

@@ -1,3 +1,24 @@
+# Copyright (c) 2020-202x The virtualenv developers
+#
+# Permission is hereby granted, free of charge, to any person obtaining
+# a copy of this software and associated documentation files (the
+# "Software"), to deal in the Software without restriction, including
+# without limitation the rights to use, copy, modify, merge, publish,
+# distribute, sublicense, and/or sell copies of the Software, and to
+# permit persons to whom the Software is furnished to do so, subject to
+# the following conditions:
+#
+# The above copyright notice and this permission notice shall be
+# included in all copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+# EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+# NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+# LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+# OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+# WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
 # virtualenv activation module
 # Activate with `overlay use activate.nu`
 # Deactivate with `deactivate`, as usual
@@ -32,8 +53,8 @@ export-env {
       }
     }
 
-    let virtual_env = r#'/Users/Boris/python-project-50/.venv'#
-    let bin = r#'bin'#
+    let virtual_env = '/Users/Boris/python-project-50/.venv'
+    let bin = 'bin'
 
     let is_windows = ($nu.os-info.family) == 'windows'
     let path_name = (if (has-env 'Path') {
@@ -47,10 +68,10 @@ export-env {
     let new_path = ($env | get $path_name | prepend $venv_path)
 
     # If there is no default prompt, then use the env name instead
-    let virtual_env_prompt = (if (r#''# | is-empty) {
+    let virtual_env_prompt = (if ('python-project-50' | is-empty) {
         ($virtual_env | path basename)
     } else {
-        r#''#
+        'python-project-50'
     })
 
     let new_env = {
