@@ -1,13 +1,8 @@
-from hexlet_code.json_handler import load_json
+from hexlet_code.cli import parse_args
+from hexlet_code.gendiff import generate_diff
 
 
 def main():
-    filenames = ['file1.json', 'file2.json']
-    for name in filenames:
-        data = load_json(name)
-        print(f"\n{name} content:")
-        print(data)
-
-
-if __name__ == '__main__':
-    main()
+    args = parse_args()
+    diff = generate_diff(args.first_file, args.second_file)
+    print(diff)

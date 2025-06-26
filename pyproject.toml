@@ -7,7 +7,11 @@ requires-python = ">=3.12"
 dependencies = []
 
 [project.scripts]
-gendiff = "hexlet_code.cli:main"
+gendiff = "hexlet_code.main:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
